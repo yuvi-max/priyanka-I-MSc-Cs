@@ -1,0 +1,54 @@
+C
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\SOFTWARES\Downloads\sqlite-tools-win-x64-3460100>sqlite3 students.db
+SQLite version 3.46.1 2024-08-13 09:16:08 (UTF-16 console I/O)
+Enter ".help" for usage hints.
+
+Create Table:
+
+sqlite> create table students_details(id integer,name varchar(100),mark integer,result varchar(100));
+
+Insert into Values:
+
+sqlite> insert into students_details(id,name,mark,result)values(2001,'ishu',85,'pass');
+sqlite> insert into students_details(id,name,mark,result)values(2002,'priyanka',30,'fail');
+sqlite> insert into students_details(id,name,mark,result)values(2003,'pavi',95,'pass');
+sqlite> insert into students_details(id,name,mark,result)values(2004,'parkavi',20,'fail');
+sqlite> insert into students_details(id,name,mark,result)values(2005,'shainy',70,'pass');
+
+Select:
+
+sqlite> select * from students_details;
+2001|ishu|85|pass
+2002|priyanka|30|fail
+2003|pavi|95|pass
+2004|parkavi|20|fail
+2005|shainy|70|pass
+
+Read Operation:
+
+sqlite> select id,name,mark,result from students_details where mark<70;
+2002|thirsha|30|fail
+2004|abi|20|fail
+
+Update:
+
+sqlite> update students_details set name='pavi' where id=2005;
+sqlite> select * from students_details;
+2001|ishu|85|pass
+2002|priyanka|30|fail
+2003|pavi|95|pass
+2004|parkavi|20|fail
+2005|shainy|70|pass
+
+Delete:
+
+sqlite> delete from students_details where id=2004;
+sqlite> select * from students_details;
+2001|ishu|85|pass
+2002|priyanka|30|fail
+2003 pavi|95|pass
+2005|shainy|70|pass
+plain&rendition=1.txt
+Displaying plain&rendition=1.txt.
